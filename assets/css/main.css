@@ -1715,6 +1715,12 @@ section,
   color: var(--accent-color);
 }
 
+.carousel-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/

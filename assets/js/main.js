@@ -96,7 +96,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 1000,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -134,7 +134,7 @@
     });
   }
 
-  /*window.addEventListener("load", initSwiper);*/
+  window.addEventListener("load", initSwiper);
 
   /**
    * Initiate Pure Counter

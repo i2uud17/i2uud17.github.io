@@ -1,11 +1,3 @@
-/**
-* Template Name: EstateAgency
-* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-* Updated: Aug 09 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -140,5 +132,32 @@
    * Initiate Pure Counter
    */
   new PureCounter();
+
+  /**
+   * Send email
+   */
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+
+    const formData = new FormData(this);
+    const messageContainer = document.getElementById('messageContainer');
+
+    fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            messageContainer.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+            document.getElementById('contactForm').reset(); // Limpia el formulario
+        } else {
+            messageContainer.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+        }
+    })
+    .catch(error => {
+        messageContainer.innerHTML = `<div class="alert alert-danger">Hubo un error al enviar el mensaje.</div>`;
+    });
+  });
 
 })();

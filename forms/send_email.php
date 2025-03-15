@@ -1,52 +1,38 @@
 <?php
-$errors = [];
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get POST data
-    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
-    $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-    $email = isset($_POST['email']) ? strip_tags(trim($_POST['email'])) : '';
-    $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $message = htmlspecialchars($_POST['message']);
 
-    // Validate form fields
-    if (empty($name)) {
-        $errors[] = 'Name is empty';
+    // Validaciones básicas
+    if (empty($name) || empty($email) || empty($phone) || empty($message)) {
+        echo json_encode(['status' => 'error', 'message' => 'Todos los campos son obligatorios.']);
+        exit;
     }
 
-    if (empty($phone)) {
-        $errors[] = 'Telephone is empty';
-    } else if if(preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo json_encode(['status' => 'error', 'message' => 'El correo electrónico no es válido.']);
+        exit;
+    }
+
+    if(preg_match("/^[0-9]{10}$/", $phone)) {
         $errors[] = 'Phone is invalid';
     }
 
-    if (empty($message)) {
-        $errors[] = 'Message is empty';
-    }
+    // Configura el correo
+    $to = "proyectosimmagine@gmail.com"; // Cambia esto por tu correo
+    $subject = "Nuevo mensaje de contacto";
+    $body = "Nombre: $name\nCorreo: $email\nTeléfono: $phone\nMensaje: $message";
+    $headers = "From: $email";
 
-    // If no errors, send email
-    if (empty($errors)) {
-        // Recipient email address
-        $recipient = "brisa.agenciainmobiliaria@gmail.com";
-
-        // Additional headers
-        $headers = "From: $name $phone <brisa.com>";
-
-        // Send email
-        if (mail($recipient, $message, $headers)) {
-            echo "Email sent successfully!";
-        } else {
-            echo "Failed to send email. Please try again later.";
-        }
+    // Intenta enviar el correo
+    if (mail($to, $subject, $body, $headers)) {
+        echo json_encode(['status' => 'success', 'message' => 'Mensaje enviado correctamente.']);
     } else {
-        // Display errors
-        echo "The form contains the following errors:<br>";
-        foreach ($errors as $error) {
-            echo "- $error<br>";
-        }
+        echo json_encode(['status' => 'error', 'message' => 'Hubo un error al enviar el mensaje.']);
     }
 } else {
-    // Not a POST request, display a 403 forbidden error
-    header("HTTP/1.1 403 Forbidden");
-    echo "You are not allowed to access this page.";
+    echo json_encode(['status' => 'error', 'message' => 'Método de solicitud no válido.']);
 }
 ?>

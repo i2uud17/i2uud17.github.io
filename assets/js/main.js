@@ -142,7 +142,7 @@
     const formData = new FormData(this);
     const messageContainer = document.getElementById('messageContainer');
 
-    fetch('send_email.php', {
+    fetch('../forms/send_email.php', {
         method: 'POST',
         body: formData
     })

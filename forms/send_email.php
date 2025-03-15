@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL); // Mostrar todos los errores
+ini_set('display_errors', 1); // Mostrar errores en pantalla
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
@@ -21,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Configura el correo
-    $to = "proyectosimmagine@gmail.com"; // Cambia esto por tu correo
+    $to = "brisa.agenciainmobiliaria@gmail.com";
     $subject = "Nuevo mensaje de contacto";
     $body = "Nombre: $name\nCorreo: $email\nTeléfono: $phone\nMensaje: $message";
     $headers = "From: $email";

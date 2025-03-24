@@ -137,11 +137,10 @@
    * Send email
    */
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
-
+    event.preventDefault();
+  
     const formData = new FormData(this);
-    const messageContainer = document.getElementById('messageContainer');
-
+  
     fetch('../forms/send_email.php', {
         method: 'POST',
         body: formData
@@ -149,14 +148,15 @@
     .then(response => response.json())
     .then(data => {
         if (data.status === 'success') {
-            messageContainer.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
-            document.getElementById('contactForm').reset(); // Limpia el formulario
+          document.getElementById('contactForm').reset(); // Limpia el formulario
+            window.location.href = 'mensaje-exitoso.html'; // Redirige a la página de éxito
         } else {
             messageContainer.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+            alert('Error: ' + data.message); // Muestra error si falla
         }
     })
     .catch(error => {
-        messageContainer.innerHTML = `<div class="alert alert-danger">Hubo un error al enviar el mensaje.</div>`;
+      messageContainer.innerHTML = `<div class="alert alert-danger">Hubo un error al enviar el mensaje.</div>`;
     });
   });
 

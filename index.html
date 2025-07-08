@@ -28,6 +28,7 @@
 				<li><a href="#whyus">¿Porqué nosotros?</a></li>
 				<li><a href="#devices">Terminales</a></li>
 				<li><a href="#cta">Empieza ahora</a></li>
+				<li><a href="#contact">Contáctanos</a></li>
 			</ul>
 		</nav>
 
@@ -145,7 +146,41 @@
 					</ul>
 				</footer>
 			</section>
+
+			<!-- Contact Form -->
+		<section id="contact" class="main special">
+			<header class="major">
+				<h2>Déjanos tus datos y te contactamos</h2>
+				<p>Completa el formulario y uno de nuestros asesores se pondrá en contacto contigo lo antes posible.</p>
+			</header>
+			<form method="POST" action="https://formsubmit.co/TU_CORREO_AQUI" class="contact-form">
+				<div class="fields">
+					<div class="field half">
+						<label for="name">Nombre completo</label>
+						<input type="text" name="name" id="name" placeholder="Tu nombre" required />
+					</div>
+					<div class="field half">
+						<label for="email">Correo electrónico</label>
+						<input type="email" name="email" id="email" placeholder="tu@email.com" required />
+					</div>
+					<input type="tel" name="phone" pattern="[0-9]{10}" placeholder="5512345678" required />
+<small>Formato: 10 dígitos</small>
+					<div class="field">
+						<label for="business">Nombre del negocio</label>
+						<input type="text" name="business" id="business" placeholder="Nombre de tu negocio" required />
+					</div>
+					<div class="field">
+						<label for="address">Dirección</label>
+						<textarea name="address" id="address" rows="3" placeholder="Dirección completa"></textarea>
+					</div>
+				</div>
+				<ul class="actions special">
+					<li><button type="submit" class="button primary">Enviar información</button></li>
+				</ul>
+			</form>
+		</section>
 		</div>
+
 
 		<!-- Footer -->
 		<footer id="footer">

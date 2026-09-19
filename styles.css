@@ -36,3 +36,17 @@ details{border-top:1px solid var(--border);margin:0 27px}summary{cursor:pointer;
 .community-banner strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.9rem,2.6vw,2.8rem);font-weight:400;line-height:1.12;margin-top:13px}
 @media(max-width:900px){.community-lead{grid-template-columns:1fr;gap:26px}.community-copy{padding:0}.community-copy h2{max-width:680px}.community-lead figure img{height:480px}.community-banner{grid-template-columns:1fr}.community-banner img{min-height:0;height:auto;aspect-ratio:16/9}.community-banner>div{padding:30px}}
 @media(max-width:700px){.hero-visual img{object-position:center 30%}.course-image{aspect-ratio:5/4}.community{padding:58px 6%}.community-lead figure img{height:auto;aspect-ratio:4/5;object-position:center 45%}.community-lead figcaption{position:static;padding:13px 16px}.community-banner{margin-top:25px}.community-banner img{aspect-ratio:4/3;object-position:center}.community-banner>div{padding:26px 22px}.community-banner strong{font-size:2rem}}
+
+/* Retrato de Sandra en la invitación final */
+.hero-visual img{object-position:50% 45%}
+.contact{max-width:none;margin:0;display:grid;grid-template-columns:minmax(320px,.8fr) minmax(480px,1.2fr);padding:0;text-align:left;background:linear-gradient(120deg,#f0cbe0,#ffdae0 50%,#f0cbe0)}
+.contact-photo{min-height:560px;overflow:hidden}
+.contact-photo img{object-position:center 28%}
+.contact-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:72px 10%;min-width:0}
+.contact-copy h2{margin:22px 0}
+.contact-copy>p{margin:15px 0}
+.contact-copy .button{margin:18px 0}
+.contact-copy .location{justify-content:flex-start;margin:28px 0 0}
+.contact-copy .contact-pending{margin:26px 0}
+@media(max-width:800px){.contact{grid-template-columns:1fr}.contact-photo{min-height:0;height:440px}.contact-copy{padding:58px 6%;align-items:center;text-align:center}.contact-copy .location{justify-content:center}.contact-copy .contact-pending{margin:26px auto}}
+@media(max-width:700px){.hero-visual img{object-position:center 48%}.contact-photo{height:390px}.contact-copy h2{font-size:3.5rem}}

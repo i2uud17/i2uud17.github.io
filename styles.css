@@ -10,3 +10,29 @@
 @media(max-width:700px){.hero h1 em{font-size:.91em}.mobile-break{display:block}.benefits span{font-size:11px}.benefits svg{width:16px}.course-card{padding:0}.course-card h3{min-height:0;font-size:24px}.course-description{min-height:0;font-size:15px}.course-top>p{font-size:12px;max-width:none}.course-meta{font-size:14px}.course-accordion [data-slot=accordion-trigger]{font-size:15px}.course-cta{font-size:15px}.method{grid-template-columns:1fr}.method-copy{padding:47px 6%}.method-copy h2{font-size:2.7rem}.method-image{min-height:300px;order:2}.method-image img{object-position:50% 60%}.materials-list{columns:1}.faq-accordion [data-slot=accordion-trigger]{font-size:16px;padding:21px 2px}.site-footer{flex-wrap:wrap;padding:32px 6%;gap:26px 20px}.site-footer .brand{flex:1 1 65%}.site-footer>span{display:none}.site-footer>a:not(.brand){font-size:12px}.site-footer>a:last-child{margin-left:auto}.contact-pending{font-size:14px}.contact .location{font-size:13px}}
 .course-accordion [data-slot=accordion-content]>div{height:auto}.hero h1{overflow-wrap:normal}.course-card h3{overflow-wrap:break-word}
 details{border-top:1px solid var(--border);margin:0 27px}summary{cursor:pointer;list-style:none;padding:17px 0;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:16px}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-family:Georgia,serif;font-size:22px;color:#8c672e}details[open] summary::after{content:'−'}.details-content{padding:0 0 20px;font-size:14px;line-height:1.7;color:#5b514c}.details-content h4{font-size:14px;color:#201b19;margin:15px 0 10px}.details-content ul{padding-left:18px}.details-content li{margin:7px 0}.details-content .includes-list{padding-left:0}.faq-list details{margin:0;border-bottom:1px solid var(--border);border-top:0}.faq-list details:first-child{border-top:1px solid var(--border)}.faq-list summary{font-size:17px;padding:24px 5px}.faq-list .details-content{font-size:16px;padding:0 5px 24px}.contact>.button{margin-top:20px}.contact-status{font-size:14px}.course-cta span{margin-left:auto}
+
+/* Fotografías integradas en la narrativa */
+.hero-visual img{object-position:50% 30%}
+.course-image{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;border-bottom:1px solid var(--border)}
+.course-card:nth-child(1) .course-image{object-position:center 48%}
+.course-card:nth-child(2) .course-image{object-position:center 45%}
+.course-card:nth-child(3) .course-image{object-position:center 42%}
+.course-card:nth-child(4) .course-image{object-position:center 47%}
+.course-card:nth-child(5) .course-image{object-position:center 52%}
+.course-card:nth-child(6) .course-image{object-position:center 48%}
+.community{padding:92px 6%;background:#f4e7e9}
+.community-lead{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;gap:8%}
+.community-copy{padding:30px 0}
+.community-copy h2{margin:18px 0 0;max-width:520px}
+.community-copy>p:not(.eyebrow):not(.community-signature){max-width:470px;color:#625653}
+.community-signature{margin-top:28px;font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#865a3d}
+.community-lead figure{margin:0;background:#000;position:relative}
+.community-lead figure img{height:520px;object-position:center 42%}
+.community-lead figcaption{position:absolute;right:0;bottom:0;background:#000;color:#f5e8df;padding:15px 20px;font-size:12px;letter-spacing:.05em}
+.community-banner{max-width:1180px;margin:42px auto 0;display:grid;grid-template-columns:1.45fr .55fr;background:#000;color:#fff;min-height:310px}
+.community-banner img{height:100%;min-height:310px;object-position:center 38%}
+.community-banner>div{padding:45px 38px;display:flex;flex-direction:column;justify-content:flex-end}
+.community-banner span{color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:.13em}
+.community-banner strong{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.9rem,2.6vw,2.8rem);font-weight:400;line-height:1.12;margin-top:13px}
+@media(max-width:900px){.community-lead{grid-template-columns:1fr;gap:26px}.community-copy{padding:0}.community-copy h2{max-width:680px}.community-lead figure img{height:480px}.community-banner{grid-template-columns:1fr}.community-banner img{min-height:0;height:auto;aspect-ratio:16/9}.community-banner>div{padding:30px}}
+@media(max-width:700px){.hero-visual img{object-position:center 30%}.course-image{aspect-ratio:5/4}.community{padding:58px 6%}.community-lead figure img{height:auto;aspect-ratio:4/5;object-position:center 45%}.community-lead figcaption{position:static;padding:13px 16px}.community-banner{margin-top:25px}.community-banner img{aspect-ratio:4/3;object-position:center}.community-banner>div{padding:26px 22px}.community-banner strong{font-size:2rem}}

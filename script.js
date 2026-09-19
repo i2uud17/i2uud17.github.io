@@ -1,6 +1,5 @@
-// Coloca aquí el número de WhatsApp con código de país, usando solamente dígitos.
-// Ejemplo para México: const WHATSAPP_NUMBER = '525512345678';
-const WHATSAPP_NUMBER = '';
+// Número asociado al enlace corto de WhatsApp proporcionado por Sandra Vera.
+const WHATSAPP_NUMBER = '5215951017050';
 
 const contactLinks = document.querySelectorAll('.contact-link');
 const contactStatus = document.querySelector('.contact-status');

@@ -13,12 +13,8 @@ La dirección tendrá este formato:
 
 `https://TU-USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/`
 
-## Activar WhatsApp
+## Enlaces de contacto
 
-Abre `script.js` y coloca el número internacional en `WHATSAPP_NUMBER`, usando solamente dígitos. Para México se ve así:
+WhatsApp e Instagram ya están configurados. Los botones de WhatsApp abren la conversación de Sandra Vera con un mensaje precargado; cada módulo incluye su nombre en el mensaje. La persona decide si lo envía.
 
-```js
-const WHATSAPP_NUMBER = '525512345678';
-```
-
-Cada curso enviará un mensaje diferente con el nombre del módulo seleccionado.
+Si cambia el número de WhatsApp, actualiza `WHATSAPP_NUMBER` en `script.js` con el número internacional, usando solamente dígitos. El enlace de Instagram está en `index.html`.

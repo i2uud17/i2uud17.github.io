@@ -60,5 +60,5 @@ details{border-top:1px solid var(--border);margin:0 27px}summary{cursor:pointer;
 .contact-photo-caption span{color:#ffb1c1;margin:0 8px}
 .site-footer .social-link{display:inline-flex;align-items:center;gap:9px;border:1px solid #816339;padding:10px 14px;color:#f5dce5;font-size:12px;transition:background .2s,border-color .2s}
 .site-footer .social-link:hover{background:#2d1b23;border-color:#cfa960;color:#fff}
-@media(max-width:800px){.contact-photo{height:490px}.contact-photo img{object-position:center 22%}}
+@media(max-width:950px){.contact{grid-template-columns:1fr}.contact-photo{height:490px}.contact-photo img{object-position:center 22%}.contact-copy{padding:58px 6%;align-items:center;text-align:center}.contact-copy .location{justify-content:center}.contact-copy .contact-pending{margin:26px auto}}
 @media(max-width:700px){.contact-photo{height:430px}.contact-photo::before{inset:14px 46px 62px 14px}.contact-photo img{top:28px;left:28px;width:calc(100% - 64px);height:calc(100% - 88px)}.contact-photo-caption{left:28px;bottom:16px;font-size:10px}.contact-photo::after{right:12px}}

@@ -62,4 +62,32 @@ details{border-top:1px solid var(--border);margin:0 27px}summary{cursor:pointer;
 .site-footer .social-link:hover{background:transparent;color:#ffb1c1}
 @media(max-width:950px){.contact{grid-template-columns:1fr}.contact-photo{height:650px}.contact-copy{padding:58px 6%;align-items:center;text-align:center}.contact-copy .location{justify-content:center}.contact-copy .contact-pending{margin:26px auto}}
 @media(max-width:700px){.contact-photo{height:540px}.contact-photo::before{top:14px;left:50%;transform:translateX(calc(-50% - 10px));width:min(376px,calc(100% - 56px));height:calc(100% - 72px)}.contact-photo img{top:28px;left:50%;width:min(360px,calc(100% - 64px));height:calc(100% - 90px)}.contact-photo-caption{left:50%;bottom:16px;width:min(360px,calc(100% - 64px));font-size:10px}.contact-photo::after{right:12px}}
+/* Acentos magenta: contraste claro sobre fondos intensos */
+:root{--secondary:#8e195a;--pink:#bb246f;--accent:#bb246f;--accent-foreground:#fff;--magenta-deep:#701342;--magenta-bright:#e95da9}
+.button{color:#fff;border-color:var(--pink)}
+.button:hover{background:#951951;border-color:#951951}
+.hero h1 em{color:var(--magenta-bright)}
+.benefits{color:#fff}
+.benefits svg{color:#f5cf83}
+.benefits span+span{border-color:#c56b98}
+.course-top{background:linear-gradient(125deg,#83164f,#aa246b);border-bottom-color:#6e1243}
+.course-number{color:#f9d487}
+.course-top>p{color:#fff}
+.course-cta{background:#a51d65;border-top-color:#7e134b;color:#fff}
+.course-cta:hover{background:#811347}
+.community{background:#75194b;color:#fff8f7}
+.community-copy>p:not(.eyebrow):not(.community-signature){color:#f9e6f0}
+.community .eyebrow,.community-signature{color:#f8d58c}
+.contact{background:linear-gradient(120deg,#741345,#9b1c60 55%,#b72d75);color:#fff}
+.contact .eyebrow{color:#ffdaec}
+.contact h2 em{color:#ffd8eb}
+.contact .button{background:#5b0b38;border-color:#5b0b38;color:#fff}
+.contact .button:hover{background:#390922;border-color:#390922}
+.contact .location svg{color:#f6d187}
+.site-footer{flex-wrap:wrap}
+.site-footer .social-link{color:#fff}
+.site-footer .social-link:hover{color:var(--magenta-bright)}
+.footer-credit{flex-basis:100%;padding-top:17px;border-top:1px solid #503040;color:#d1bac5;text-align:center;font-size:11px;letter-spacing:.09em}
+.footer-credit a{color:#f3a3cb;text-decoration:underline;text-underline-offset:3px}
+.footer-credit a:hover{color:#fff}
 
